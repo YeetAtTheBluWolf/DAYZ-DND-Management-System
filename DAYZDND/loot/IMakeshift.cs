@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DAYZDND.loot
 {
-    interface ITool
+    public interface IMakeshift
     {
 
-        public void Utility();
+        public void Condition();
 
     }
 }

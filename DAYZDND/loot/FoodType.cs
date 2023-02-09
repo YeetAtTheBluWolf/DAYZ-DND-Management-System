@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace DAYZDND.loot
 {
-    interface ITool
+    public enum FoodType
     {
-
-        public void Utility();
-
+        Raw,
+        Cooked,
+        Canned,
+        Spice,
+        Processed
     }
 }
