@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class Hacksaw : Weapon, ITool
     {
-        public Hacksaw(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Hacksaw() : base(LootRarity.Uncommon, "Hacksaw", "A hacksaw is a fine-toothed saw, originally and mainly made for cutting metal.", WeaponType.Cutting)
         {
         }
 

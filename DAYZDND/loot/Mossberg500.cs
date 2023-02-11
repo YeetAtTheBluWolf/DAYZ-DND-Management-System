@@ -8,12 +8,14 @@ namespace DAYZDND.loot
 {
     public class Mossberg500 : Weapon, IFirearm
     {
-        public Mossberg500(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Mossberg500() : base(LootRarity.Uncommon, "Mossberg 500", "The Mossberg 500 (M500) is a series of pump action shotguns manufactured by O.F. Mossberg & Sons.", WeaponType.Bludgeoning)
         {
+            FirearmType = FirearmType.Shotgun;
+            Ammo = new Ammo[] { loot.Ammo._12Gauge, loot.Ammo._20Gauge };
         }
 
-        public FirearmType FirearmType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Ammo[] Ammo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }
+        public Ammo[] Ammo { get { return Ammo; } set => Ammo = value; }
 
         public override void Attack()
         {

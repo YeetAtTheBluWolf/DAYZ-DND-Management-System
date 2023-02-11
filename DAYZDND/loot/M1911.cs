@@ -8,12 +8,14 @@ namespace DAYZDND.loot
 {
     public class M1911 : Weapon, IFirearm
     {
-        public M1911(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public M1911() : base(LootRarity.Common, "M1911", "he M1911 (Colt 1911 or Colt Government) is a single-action, recoil-operated, semi-automatic pistol chambered for the .45 ACP cartridge.", WeaponType.Bludgeoning)
         {
+            FirearmType = FirearmType.Pistol;
+            Ammo = new Ammo[] { loot.Ammo._45acp };
         }
 
-        public FirearmType FirearmType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Ammo[] Ammo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }
+        public Ammo[] Ammo { get { return Ammo; } set => Ammo = value; }
 
         public override void Attack()
         {

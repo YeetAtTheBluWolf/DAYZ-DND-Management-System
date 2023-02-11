@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class UtilityKnife : Weapon, ITool
     {
-        public UtilityKnife(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public UtilityKnife() : base(LootRarity.Common, "Utility Knife", "A utility knife is any type of knife used for general manual work purposes.", WeaponType.Stabbing)
         {
         }
 

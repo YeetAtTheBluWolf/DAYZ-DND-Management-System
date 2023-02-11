@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class MultiTool : Weapon, ITool
     {
-        public MultiTool(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public MultiTool() : base(LootRarity.Rare, "Multi-Tool", "A multi-tool (or multitool) is a hand tool that combines several individual functions in a single unit.", WeaponType.Stabbing)
         {
         }
 

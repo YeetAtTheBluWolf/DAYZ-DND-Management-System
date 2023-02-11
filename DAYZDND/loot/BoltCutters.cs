@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class BoltCutters : Weapon, ITool
     {
-        public BoltCutters(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public BoltCutters() : base(LootRarity.Rare, "Bolt Cutters", "Bolt Cutters ready to cut fences", WeaponType.Bludgeoning)
         {
         }
 

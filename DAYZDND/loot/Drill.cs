@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class Drill : Weapon, ITool
     {
-        public Drill(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Drill() : base(LootRarity.Uncommon, "DRILL", "BRRRRRRRR BRING BRING BRRRRRRR", WeaponType.Stabbing)
         {
         }
 

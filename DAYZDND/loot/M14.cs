@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DAYZDND.loot
 {
-    public class Winchester : Weapon, IFirearm
+    public class M14 : Weapon, IFirearm
     {
-        public Winchester() : base(LootRarity.Rare, "Winchester", "It has an iconic place in American sporting culture and has been held in high regard by shooters since it was introduced in 1936, earning the moniker \"The Rifleman's Rifle\".", WeaponType.Bludgeoning)
+        public M14() : base(LootRarity.Rare, "M14", "The M14 rifle, officially the United States Rifle, Caliber 7.62 mm, M14, is an American selective-fire battle rifle chambered for the 7.62×51mm NATO (.308 in) cartridge.", WeaponType.Bludgeoning)
         {
-            FirearmType = FirearmType.Bolt_Action_Sniper;
-            Ammo = new Ammo[] { loot.Ammo._22hornetcal };
+            FirearmType = FirearmType.Rifle;
+            Ammo = new Ammo[] { loot.Ammo._308 };
         }
 
         public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }

@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class Pickaxe : Weapon, ITool
     {
-        public Pickaxe(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Pickaxe() : base(LootRarity.Rare, "Pickaxe", "A pickaxe, pick-axe, or pick is a generally T-shaped hand tool used for prying.", WeaponType.Stabbing)
         {
         }
 

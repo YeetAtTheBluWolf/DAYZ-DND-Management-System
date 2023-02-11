@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class Hachet : Weapon, ITool
     {
-        public Hachet(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Hachet() : base(LootRarity.Common, "Hachet", "A small axe with a sharp head", WeaponType.Cutting)
         {
         }
 

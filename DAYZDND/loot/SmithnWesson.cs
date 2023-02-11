@@ -8,12 +8,14 @@ namespace DAYZDND.loot
 {
     public class SmithnWesson : Weapon, IFirearm
     {
-        public SmithnWesson(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public SmithnWesson() : base(LootRarity.Rare, "Smith and Wesson", "The Smith & Wesson Model 10, previously known as the Smith & Wesson .38 Hand Ejector Model of 1899, the Smith & Wesson Military & Police or the Smith & Wesson Victory Model, is a K-frame revolver of worldwide popularity.", WeaponType.Bludgeoning)
         {
+            FirearmType = FirearmType.Revolver;
+            Ammo = new Ammo[] { loot.Ammo._32cal };
         }
 
-        public FirearmType FirearmType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Ammo[] Ammo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }
+        public Ammo[] Ammo { get { return Ammo; } set => Ammo = value; }
 
         public override void Attack()
         {

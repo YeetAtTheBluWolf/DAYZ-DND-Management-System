@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class Axe : Weapon, ITool
     {
-        public Axe(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Axe() : base(LootRarity.Rare, "Steel Axe", "A sharp axe with a wooden rod and steel axe head.", WeaponType.Cutting)
         {
         }
 

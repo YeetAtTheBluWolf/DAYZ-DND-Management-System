@@ -8,12 +8,14 @@ namespace DAYZDND.loot
 {
     public class Remington700 : Weapon, IFirearm
     {
-        public Remington700(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Remington700() : base(LootRarity.Common, "Remington 700", "The Remington Model 700 is a series of bolt-action centerfire rifles manufactured by Remington Arms since 1962.", WeaponType.Bludgeoning)
         {
+            FirearmType = FirearmType.Rifle;
+            Ammo = new Ammo[] { loot.Ammo._308 };
         }
 
-        public FirearmType FirearmType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Ammo[] Ammo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }
+        public Ammo[] Ammo { get { return Ammo; } set => Ammo = value; }
 
         public override void Attack()
         {

@@ -18,6 +18,7 @@ namespace DAYZDND.loot
         _308,
         _22hornetcal,
         _357,
-        _425express
+        _425express,
+        Nails
     }
 }

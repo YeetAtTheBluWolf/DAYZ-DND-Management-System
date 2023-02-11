@@ -9,12 +9,14 @@ namespace DAYZDND.loot
     public class Nailgun : Weapon, IFirearm, ITool
     {
 
-        public FirearmType FirearmType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Ammo[] Ammo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public Nailgun(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Nailgun() : base(LootRarity.Uncommon, "Nailgun", "A nail gun, nailgun or nailer is a form of hammer used to drive nails into wood or other materials.", WeaponType.Bludgeoning)
         {
+            FirearmType = FirearmType.Pistol;
+            Ammo = new Ammo[] { loot.Ammo.Nails };
         }
+
+        public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }
+        public Ammo[] Ammo { get { return Ammo; } set => Ammo = value; }
 
         public override void Attack()
         {

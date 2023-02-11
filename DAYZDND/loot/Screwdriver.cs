@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class Screwdriver : Weapon, ITool
     {
-        public Screwdriver(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Screwdriver() : base(LootRarity.Common, "Screwdriver", "A typical simple screwdriver has a handle and a shaft, ending in a tip the user puts into the screw head before turning the handle.", WeaponType.Stabbing)
         {
         }
 

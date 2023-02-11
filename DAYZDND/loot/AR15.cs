@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace DAYZDND.loot
 {
-    internal class AR15 : Weapon, IFirearm
+    public class AR15 : Weapon, IFirearm
     {
-        public AR15(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public AR15(WeaponType weaponType) : base(LootRarity.Rare, "AR-15", "An AR-15-style rifle is any lightweight semi-automatic rifle based on or similar to the Colt AR-15 design.", WeaponType.Bludgeoning)
         {
+            FirearmType = FirearmType.Rifle;
+            Ammo = new Ammo[] { loot.Ammo._223rem };
         }
 
-        public FirearmType FirearmType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Ammo[] Ammo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public FirearmType FirearmType { get { return FirearmType; } set { FirearmType = value; } }
+        public Ammo[] Ammo { get { return Ammo; } set { Ammo = value; } }
 
         public override void Attack()
         {

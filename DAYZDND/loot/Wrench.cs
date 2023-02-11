@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class Wrench : Weapon, ITool
     {
-        public Wrench(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Wrench() : base(LootRarity.Uncommon, "Wrench", "A wrench or spanner is a tool used to provide grip and mechanical advantage in applying torque to turn objects—usually rotary fasteners, such as nuts and bolts—or keep them from turning.", WeaponType.Bludgeoning)
         {
         }
 

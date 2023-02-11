@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class Scissor : Weapon, ITool
     {
-        public Scissor(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Scissor() : base(LootRarity.Common, "Scissor", "Scissors are hand-operated shearing tools. A pair of scissors consists of a pair of metal blades pivoted so that the sharpened edges slide against each other when the handles (bows) opposite to the pivot are closed.", WeaponType.Stabbing)
         {
         }
 

@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class Hammer : Weapon, ITool
     {
-        public Hammer(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Hammer() : base(LootRarity.Uncommon, "Hammer", "A hammer is a tool, most often a hand tool, consisting of a weighted \"head\" fixed to a long handle that is swung to deliver an impact to a small area of an object.", WeaponType.Bludgeoning)
         {
         }
 

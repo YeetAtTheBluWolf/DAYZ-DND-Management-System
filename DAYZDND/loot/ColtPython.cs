@@ -8,12 +8,14 @@ namespace DAYZDND.loot
 {
     internal class ColtPython : Weapon, IFirearm
     {
-        public ColtPython(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public ColtPython() : base(LootRarity.Common, "Colt Python", "The Colt Python is a .357 Magnum caliber revolver manufactured by Colt's Manufacturing Company of Hartford, Connecticut. It was first introduced in 1955, the same year as Smith & Wesson's M29 .44 Magnum. ", WeaponType.Bludgeoning)
         {
+            FirearmType = FirearmType.Revolver;
+            Ammo = new Ammo[] { loot.Ammo._357 };
         }
 
-        public FirearmType FirearmType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Ammo[] Ammo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }
+        public Ammo[] Ammo { get { return Ammo; } set => Ammo = value; }
 
         public override void Attack()
         {

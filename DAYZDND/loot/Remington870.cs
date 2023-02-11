@@ -8,12 +8,14 @@ namespace DAYZDND.loot
 {
     internal class Remington870 : Weapon, IFirearm
     {
-        public Remington870(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Remington870() : base(LootRarity.Uncommon, "Remington 870", "It is widely used by the public for shooting sports, hunting and self-defense, as well as by law enforcement and military organizations worldwide.", WeaponType.Bludgeoning)
         {
+            FirearmType = FirearmType.Shotgun;
+            Ammo = new Ammo[] { loot.Ammo._12Gauge };
         }
 
-        public FirearmType FirearmType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Ammo[] Ammo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }
+        public Ammo[] Ammo { get { return Ammo; } set => Ammo = value; }
 
         public override void Attack()
         {

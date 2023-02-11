@@ -8,7 +8,7 @@ namespace DAYZDND.loot
 {
     public class Shovel : Weapon, ITool
     {
-        public Shovel(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public Shovel() : base(LootRarity.Uncommon, "Shovel", "A shovel is a tool used for digging, lifting, and moving bulk materials, such as soil, coal, gravel, snow, sand, or ore.", WeaponType.Stabbing)
         {
         }
 

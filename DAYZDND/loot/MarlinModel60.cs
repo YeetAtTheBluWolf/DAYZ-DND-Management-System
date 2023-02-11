@@ -8,12 +8,14 @@ namespace DAYZDND.loot
 {
     public class MarlinModel60 : Weapon, IFirearm
     {
-        public MarlinModel60(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+        public MarlinModel60() : base(LootRarity.Common, "Marlin Model 60", "The Marlin Model 60, also known as the Marlin Glenfield Model 60, is a semi-automatic rifle that fires the .22 LR rimfire cartridge.", WeaponType.Bludgeoning)
         {
+            FirearmType = FirearmType.Rifle;
+            Ammo = new Ammo[] { loot.Ammo._35rem };
         }
 
-        public FirearmType FirearmType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Ammo[] Ammo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }
+        public Ammo[] Ammo { get { return Ammo; } set => Ammo = value; }
 
         public override void Attack()
         {

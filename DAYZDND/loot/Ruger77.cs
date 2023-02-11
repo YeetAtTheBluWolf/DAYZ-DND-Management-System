@@ -8,12 +8,15 @@ namespace DAYZDND.loot
 {
     public class Ruger77 : Weapon, IFirearm
     {
-        public Ruger77(LootRarity rarity, string name, string description, WeaponType weaponType) : base(rarity, name, description, weaponType)
+
+        public Ruger77() : base(LootRarity.Uncommon, "Ruger Model 77", "The Ruger 77/22 is a bolt-action rimfire rifle chambered for the .22 Long Rifle, .22 WMR, or .22 Hornet.", WeaponType.Bludgeoning)
         {
+            FirearmType = FirearmType.Bolt_Action_Sniper;
+            Ammo = new Ammo[] { loot.Ammo._425express };
         }
 
-        public FirearmType FirearmType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Ammo[] Ammo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }
+        public Ammo[] Ammo { get { return Ammo; } set => Ammo = value; }
 
         public override void Attack()
         {
