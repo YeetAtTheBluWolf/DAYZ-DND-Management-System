@@ -7,7 +7,9 @@ namespace DAYZDND;
 
 public class Program
 {
-    
+
+    private static readonly ItemIdentidy Items = new();
+
     public static void Main()
     {
         var numOfUsers = UserInput.Int("Enter a number of users: ");
@@ -22,15 +24,31 @@ public class Program
             int userInput = UserInput.Int("[1] To Quit\n[2] Users\n[3] Roll a dice\n[4] Generate Loot\nType a number to continue: ");
             if (userInput == 1)
                 break;
-            if(userInput == 2)
+            else if(userInput == 2)
             {
                 PrintUsers(usernames);
                 userInput = UserInput.Int("Choose a user(Type 0 to exit): ");
                 if (userInput == 0)
                     break;
-                Console.WriteLine(usernames[userInput - 1]);
+                int chosenUser = userInput - 1;
+                userInput = UserInput.Int("[1] Status\n[2] Get Inventory\n[3] Add a item\n[4] Remove a item\n[5] Edit Description\n[6] Change health\n[7] Add zombie kills\nWhat do you want to do: ");
+                if(userInput == 1)
+                {
+                    Console.WriteLine(usernames[chosenUser].ToString());
+                }
+                if(userInput == 2)
+                {
+                    Console.WriteLine(usernames[chosenUser].GetInv());
+                }
+                if(userInput == 3)
+                {
+                    Console.WriteLine(Items.GetItemList());
+                    userInput = UserInput.Int("What item do you chose: ");
+                    usernames[chosenUser].AddToInv(Items.GetItem(userInput));
+                    Console.WriteLine(usernames[chosenUser].GetInv());
+                }
             }
-            if(userInput == 3)
+            else if(userInput == 3)
                 Console.WriteLine(Generate.ChanceRoll(UserInput.Int("Pick a maximum number: ")));
 
         }
@@ -42,7 +60,7 @@ public class Program
         Console.WriteLine("Users: ");
         for(int i = 0; i < users.Length; i++)
         {
-            Console.WriteLine("[{1}] {0}", users[i], i + 1);
+            Console.WriteLine("[{1}] {0}", users[i].Name, i + 1);
         }
     }
 

@@ -8,14 +8,14 @@ namespace DAYZDND.loot
 {
     public class AR15 : Weapon, IFirearm
     {
-        public AR15(WeaponType weaponType) : base(LootRarity.Rare, "AR-15", "An AR-15-style rifle is any lightweight semi-automatic rifle based on or similar to the Colt AR-15 design.", WeaponType.Bludgeoning)
+        public AR15() : base(LootRarity.Rare, "AR-15", "An AR-15-style rifle is any lightweight semi-automatic rifle based on or similar to the Colt AR-15 design.", WeaponType.Bludgeoning)
         {
             FirearmType = FirearmType.Rifle;
             Ammo = new Ammo[] { loot.Ammo._223rem };
         }
 
-        public FirearmType FirearmType { get { return FirearmType; } set { FirearmType = value; } }
-        public Ammo[] Ammo { get { return Ammo; } set { Ammo = value; } }
+        public FirearmType FirearmType { get { return FirearmType; } set { } }
+        public Ammo[] Ammo { get { return Ammo; } set { } }
 
         public override void Attack()
         {

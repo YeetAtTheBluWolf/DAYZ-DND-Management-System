@@ -15,8 +15,8 @@ namespace DAYZDND.loot
             Ammo = new Ammo[] { loot.Ammo.Nails };
         }
 
-        public FirearmType FirearmType { get { return FirearmType; } set => FirearmType = value; }
-        public Ammo[] Ammo { get { return Ammo; } set => Ammo = value; }
+        public FirearmType FirearmType { get { return FirearmType; } set { } }
+        public Ammo[] Ammo { get { return Ammo; } set { } }
 
         public override void Attack()
         {

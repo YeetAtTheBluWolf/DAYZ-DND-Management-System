@@ -15,6 +15,7 @@ namespace DAYZDND.users
         public string Description { get; set; }
         public ArrayList Inventory { get; set; }
         public int ZombieKills { get; private set; }
+        public int Health { get; set; }
 
         public User(String name)
         {
@@ -22,12 +23,15 @@ namespace DAYZDND.users
             Description = "";
             Inventory = new ArrayList();
             ZombieKills = 0;
+            Health = 100;
         }
 
         public string GetInv()
         {
             if (Inventory.Count <= 0)
+            {
                 return "Your inventory is empty.";
+            }
             string str = "";
             for(int i = 0; i < Inventory.Count; i++)
             {
@@ -48,7 +52,7 @@ namespace DAYZDND.users
 
         public override string ToString()
         {
-            return Name + "\n" + Description + "\nZombie Kills: " + ZombieKills; 
+            return Name + "\n" + Description + "\nHealth: " + Health + "\nZombie Kills: " + ZombieKills; 
         }
 
     }
