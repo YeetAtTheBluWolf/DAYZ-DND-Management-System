@@ -35,7 +35,7 @@ namespace DAYZDND.users
             string str = "";
             for(int i = 0; i < Inventory.Count; i++)
             {
-                str += Inventory[i] + "\n";
+                str += "[" + i + "] " + Inventory[i] + "\n";
             }
             return "Inventory: \n" + str;
         }
@@ -43,6 +43,11 @@ namespace DAYZDND.users
         public void AddToInv(Item item)
         {
             Inventory.Add(item);
+        }
+
+        public void RemoveAItem(int index)
+        {
+            Inventory.RemoveAt(index);
         }
 
         public void AddKills(int kills)
