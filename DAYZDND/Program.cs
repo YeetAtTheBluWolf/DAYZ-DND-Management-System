@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DAYZDND.util;
 using DAYZDND.users;
-using DAYZDND.loot;
 
 namespace DAYZDND;
 
